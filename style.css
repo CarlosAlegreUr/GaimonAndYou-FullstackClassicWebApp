@@ -1,0 +1,53 @@
+
+.logFormBox {
+    display: block;
+    width: 250px;
+    margin-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3%;
+    border: 5px solid rgb(111, 111, 218);
+    border-radius: 40px;
+    background-color: rgba(211, 134, 0, 0.837);
+}
+
+.homeButtonDiv {
+    margin-top: 60px;
+    color: darkblue;
+    border-radius: 555px;
+}
+
+.centerDiv {
+    display: block;
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.infoDiv {
+    display: block;
+    width: 250px;
+    margin-right: 100px;
+    border: 12px solid maroon;
+}
+
+body {
+    background-color: rgba(250, 161, 7, 0.837);
+}
+
+.shipShapeInput {
+    display: block;
+    border-radius: 100px;
+    border-end-end-radius: 444px;
+    border-end-start-radius: 44px;
+    margin-bottom: 3px;
+}
+
+button {
+    color: darkblue;
+    font-weight: 800;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
