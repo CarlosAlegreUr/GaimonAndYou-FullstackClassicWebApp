@@ -1,11 +1,40 @@
-.indexUpperMenu {
+.index-upper-menu {
     display: flex;
     width: 428px;
     justify-content: center;
     list-style-type: none;
+    align-content: space-between;
 }
 
-.logFormBox {
+.upper-menu-div {
+    display: flex;
+    width: 500px;
+    margin-left: auto;
+    padding: 0px;
+}
+
+.center-div {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    font-family: 'Bangers', cursive;
+    color: rgb(35, 35, 35);
+    text-shadow: 1px 1px 20px yellow;
+}
+
+.home-button-footer {
+    margin-top: 10px;
+    color: darkblue;
+}
+
+.hub-menu-div {
+    display: block;
+    width: 200px;
+    margin: 100px auto 100px auto;
+    padding: 10px;
+}
+
+.log-form-box {
     display: block;
     width: 250px;
     margin: 50px auto;;
@@ -16,37 +45,7 @@
     text-align: center;
 }
 
-.homeButtonDiv {
-    margin-top: 60px;
-    color: darkblue;
-    border-radius: 555px;
-}
-
-.centerDiv {
-    display: block;
-    width: 250px;
-    margin: 0 auto;
-    font-family: 'Bangers', cursive;
-    color: rgb(35, 35, 35);
-    text-shadow: 1px 1px 20px yellow;
-}
-
-.upperMenuDiv {
-    display: flex;
-    width: 500px;
-    margin-left: auto;
-    padding: 0px;
-}
-
-.infoDiv {
-    display: block;
-    width: 250px;
-    margin-right: 100px;
-    border: 6px dotted maroon;
-    background-color: rgb(246, 179, 63);
-}
-
-.shipShapeInput {
+.ship-shape-input {
     display: block;
     border-radius: 100px;
     border-end-end-radius: 444px;
@@ -54,16 +53,48 @@
     margin-bottom: 3px;
 }
 
-body {
-    background-color: rgba(250, 161, 7, 0.837);
-    background-image: url("./images/island.webp");
+.info-div {
+    display: block;
+    background-image: url("./images/treasure-map.webp");
+    background-size: cover;
+    width: 250px;
+    margin-right: 100px;
+    border: 6px dotted maroon;
+    background-color: rgb(246, 179, 63);
+
+    text-shadow: 1px 1px 2px rgb(247, 243, 243);
+    color: rgb(51, 97, 12);
+}
+
+.info-div:hover {
+    background-image: url("./images/pirate-skull.webp");
+    transition: 5s;
     background-size: cover;
 }
 
-button {
+#find-war-button {
+    color: darkred;
+    text-shadow: red;
+ }
+
+ #find-war-button:active {
+    background-color: black;
+    transition: 0.25s;
+    color: darkred;
+    text-shadow: 1px -1px 1px yellow;
+ }
+
+.general-button {
     color: darkblue;
     font-weight: 800;
     background-color: aquamarine;
     border-radius: 10px;
     text-shadow: -1px -2px 2px darkcyan;
 }
+
+.castles {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
