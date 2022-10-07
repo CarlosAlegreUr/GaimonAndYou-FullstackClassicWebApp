@@ -11,14 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
+    <script src="gaimonCustomize.js"></script>
     <title> 💅 Gaimon Customizer 💅</title>
 </head>
 <body>
     <div class="center-div" name="gaimon">
         <h2> CUSTOMIZE YOUR GAIMON </h2>
-        <img src="./images/gaimon_normal.webp" width="60%" alt="Gaimon normal face">
+        <img id="gaimon-image" src="./images/gaimon_normal.webp" width="60%" alt="Gaimon normal face">
         <input type="text" placeholder="Name">
-        
+        <button id="mood-button" onclick="changeMood()"> MAKE HIM ANGRY </button>
         <form class="log-form-box">
             <div>
                 <p> Select attributes: </p>
