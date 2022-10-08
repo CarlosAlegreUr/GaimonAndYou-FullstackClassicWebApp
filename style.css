@@ -22,6 +22,11 @@
     text-shadow: 1px 1px 20px yellow;
 }
 
+#glasses {
+    display: felx;
+    z-index: 3;
+}
+
 .home-button-footer {
     margin-top: 10px;
     color: darkblue;

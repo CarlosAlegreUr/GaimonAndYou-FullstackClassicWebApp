@@ -17,12 +17,49 @@ async function changeMood() {
 
 
 async function dressGaimon() {
-    //TODO:  Checked event listener...
-    // const glassesCheckbox = await document.getElementById("glasses-checkbox")
-    // glassesCheckbox.addEventListener()
+    // DevNote: This can be more efficient.
+    const glassesCheckbox = document.getElementById("glasses-checkbox")
+    glassesCheckbox.addEventListener("change", async () => {
+        clothingMenu = await document.getElementById("clothing-menu")
+        if(glassesCheckbox.checked) {
+            const glassesMenu = await createGlassesMenu()
+            await glassesCheckbox.insertAdjacentElement("afterend", glassesMenu)
+            console.log("Glasses Marked")
+            console.log(clothingMenu)
+            showOrHideGlasses(true)
+        } else {
+            const glassesMenu = await document.getElementById("glasses-menu")
+            showOrHideGlasses(false)
+            glassesMenu.remove()
+            console.log("Glasses Unmarked")
+        }
+    })
 
-    // Glasses menu => Element creation
+    const hatCheckbox = document.getElementById("hat-checkbox")
+    hatCheckbox.addEventListener("change", async () => {
+        const hat = document.getElementById("hat")
+        if(hatCheckbox.checked) {
+            hat.style.visibility = "visible"
+        } else {
+            hat.style.visibility = "hidden"
+        }
+    })
+
+    const stickCheckbox = document.getElementById("stick-checkbox")
+    stickCheckbox.addEventListener("change", async () => {
+        const hat = document.getElementById("stick")
+        if(stickCheckbox.checked) {
+            stick.style.visibility = "visible"
+        } else {
+            stick.style.visibility = "hidden"
+        }
+    })
+}
+
+
+async function createGlassesMenu() {
     const glassesMenu = await document.createElement("select")
+    glassesMenu.setAttribute("id", "glasses-menu")
 
     const op1 = await document.createElement("option")
     op1.innerHTML = "sunglasses"
@@ -34,15 +71,17 @@ async function dressGaimon() {
     await glassesMenu.appendChild(op1)
     await glassesMenu.appendChild(op2)
     await glassesMenu.appendChild(op3)
-    console.log(glassesMenu)
 
     //TODO: add style
-
-    // TODO: unchecked Event listener...
-    // Remove <select>
+    return glassesMenu
 }
 
 
-async function glassesMenu() {
-
+async function showOrHideGlasses(show) {
+    const glassesMenu = await document.getElementById("glasses-menu")
+    glasses = await document.getElementById(glassesMenu.value)
+    if(show)
+        glasses.style.visibility = "visible"
+    else
+        glasses.style.visibility = "hidden"
 }

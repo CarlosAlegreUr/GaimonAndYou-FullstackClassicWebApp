@@ -16,20 +16,26 @@
     <title> 💅 Gaimon Customizer 💅</title>
 </head>
 <body>
+
     <div class="center-div" name="gaimon">
         <h2> CUSTOMIZE YOUR GAIMON </h2>
-        <img id="gaimon-image" src="./images/gaimon_normal.webp" width="60%" alt="Gaimon normal face">
-        <button id="mood-button" onclick="changeMood()"> MAKE HIM ANGRY </button>
+
+        <div>
+            <img class="gaimon-image" id="gaimon-image" src="./images/gaimon_normal.webp" alt="Gaimon normal face">
+            <img class="gaimon-hat" id="hat" src="./images/hat.webp">
+            <img class="gaimon-stick" id="stick" src="./images/stick.webp">
+            <img id="sunglasses" src="./images/sunglasses.webp">
+            <img id="hippie-glasses" src="./images/hippie_glasses.webp">
+            <img id="vr-glasses" src="./images/vr_glasses.webp">
+        </div>
+
+        <button id="mood-button" onclick="changeMood()"> MAKE HIM ANGRY </button>    
+
         <form class="log-form-box">
             <input type="text" placeholder="Name">
-            <div>
+            <div id="clothing-menu">
                 <p> Select attributes: </p>
-                    Glasses <input id="glasses-checkbox" type="checkbox"> 
-                    <select> 
-                        <option> sunglasses </option>  
-                        <option> hippie </option>  
-                        <option> VR </option>
-                    </select> <br>
+                    Glasses <input id="glasses-checkbox" type="checkbox"> <br>
                     Hat <input id="hat-checkbox" type="checkbox"> <br>
                     Stick <input id="stick-checkbox" type="checkbox"> <br>
             </div>
@@ -38,14 +44,6 @@
         </form>
         
     </div> 
-
-    <div>
-        <img class="gaimon-clothing gaimon-glasses" src="./images/sunglasses.webp" width="25">
-        <img class="gaimon-clothing gaimon-glasses" src="./images/hippie_glasses.webp" width="25">
-        <img class="gaimon-clothing gaimon-glasses" src="./images/vr_glasses.webp" width="25">
-        <img class="gaimon-clothing gaimon-stick" src="./images/stick.webp" width="25">
-        <img class="gaimon-clothing gaimon-hat" src="./images/hat.webp" width="25">
-    </div>
 
     <br>
     <a href="hub.html"> <button> GO TO HUB </button> </a>
