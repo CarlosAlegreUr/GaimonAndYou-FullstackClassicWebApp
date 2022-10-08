@@ -91,3 +91,10 @@ async function showHideStick() {
         stick.style.visibility = "hidden"
     }
 }
+
+const gaimonAttributesForm = document.getElementById("gaimon-attributes")
+gaimonAttributesForm.addEventListener("submit", sendAttributesToDB)
+async function sendAttributesToDB(event) { 
+    console.log(event)
+    alert("Enviando datos...")
+}
