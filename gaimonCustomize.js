@@ -96,5 +96,5 @@ const gaimonAttributesForm = document.getElementById("gaimon-attributes")
 gaimonAttributesForm.addEventListener("submit", sendAttributesToDB)
 async function sendAttributesToDB(event) { 
     console.log(event)
-    alert("Enviando datos...")
+    alert("Sending data...")
 }
