@@ -7,3 +7,4 @@
     3.2.- Cleaner CSS code, use best practises.
     3.3.- Animations with CSS and JS
 4.- Use Prettier plug-in to reformat.
+5.- Program stayed Logged-In user story.
