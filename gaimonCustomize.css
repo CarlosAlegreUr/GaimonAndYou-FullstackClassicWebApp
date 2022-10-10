@@ -1,0 +1,60 @@
+.customize-menu-div {
+    display: block;
+    width: 250px;
+    font-family: 'Bangers', cursive;
+    color: rgb(35, 35, 35);
+    text-shadow: 1px 1px 20px yellow;
+}
+
+.gaimon-hat {
+    position: relative;
+    width: 40%;
+    bottom: 165px;
+    left: 28%;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.gaimon-stick {
+    position: relative;
+    width: 20%;
+    bottom: 118px;
+    left: -30%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#sunglasses {
+    position: relative;
+    width: 20%;
+    bottom: 161px;
+    left: -23%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#hippie-glasses {
+    position: relative;
+    width: 20%;
+    bottom: 187px;
+    left: 38%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#vr-glasses {
+    position: relative;
+    width: 20%;
+    bottom: 187px;
+    left: 18%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.gaimon-image {
+    width: 100%;
+    /* display:.flex; */
+    z-index: 0;
+}
+
+

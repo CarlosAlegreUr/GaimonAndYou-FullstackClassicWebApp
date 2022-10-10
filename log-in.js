@@ -1,0 +1,2 @@
+var loggedIn = false
+
