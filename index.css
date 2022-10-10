@@ -1,0 +1,43 @@
+.index-upper-menu {
+    display: flex;
+    width: 428px;
+    justify-content: center;
+    list-style-type: none;
+    align-content: space-between;
+}
+
+.upper-menu-div {
+    display: flex;
+    width: 500px;
+    margin-left: auto;
+    padding: 0px;
+}
+
+.info-div {
+    display: block;
+    background-image: url("./images/treasure-map.webp");
+    background-size: cover;
+    width: 50%;
+    margin-right: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(247, 243, 243);
+    color: rgb(12, 14, 11);
+}
+
+.info-text-div {
+    font-family: 'onePiece';
+}
+
+.cross-images {
+    display: flex;
+}
+
+.info-div:hover {
+    background-image: url("./images/gaimon_normal.webp");
+    transition: 3s;
+    background-size: cover;
+}
+
+.table-image {
+    width: 20%;
+}

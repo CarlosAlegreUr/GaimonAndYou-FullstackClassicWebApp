@@ -7,4 +7,7 @@
     3.2.- Cleaner CSS code, use best practises.
     3.3.- Animations with CSS and JS
 4.- Use Prettier plug-in to reformat.
+
+Server Side:
 5.- Program stayed Logged-In user story.
+6.- When customizing your Gaimon, web remembers where you left it.

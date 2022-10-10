@@ -1,0 +1,18 @@
+.hub-menu-div {
+    display: block;
+    width: 200px;
+    margin: 100px auto 100px auto;
+    padding: 10px;
+}
+
+#find-war-button {
+    color: darkred;
+    text-shadow: red;
+ }
+
+ #find-war-button:active {
+    background-color: black;
+    transition: 0.25s;
+    color: darkred;
+    text-shadow: 1px -1px 1px yellow;
+ }
