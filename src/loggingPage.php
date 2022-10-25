@@ -27,7 +27,6 @@ function processLogInInput()
         return "Email not valid";
 }
 
-
 $login_error = processLogInInput();
 if ($login_error === true)
     header("Location: ./pages/gaimonHub.html");
@@ -43,7 +42,6 @@ if ($login_error === true)
 
     <link rel="stylesheet" href="styles/generalStyle.css">
 
-    <!-- <script defer src="scripts/logInPage.js"></script> -->
     <title> 📘 Gaimon Wars Log In 📘</title>
 </head>
 

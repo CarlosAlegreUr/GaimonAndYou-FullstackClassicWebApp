@@ -1,3 +1,8 @@
+<?php
+   $time = time() + 1;
+   setcookie("loggedIn", null, $time);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +12,26 @@
     
     <!-- <meta> decription, author, keywords -->
 
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/generalStyle.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/generalStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
-    <script defer src="../scripts/index.js"></script>
+    <script defer src="scripts/index.js"></script>
     <title>🏠 Gaimon  & You 🏠</title>
 </head>
 <body>
     <div class="upper-menu-div">
         <ul class="index-upper-menu">
             <li id="login-li">    
-                <a href="loggingPage.html">
+                <a href="pages/loggingPage.html">
                     <button> LOG IN </button>
                 </a>
             </li>
 
             <li id="signup-li">
-                <a href="signingUpPage.html">
+                <a href="pages/signingUpPage.html">
                     <button> SIGN UP </button>
                 </a>
             </li>

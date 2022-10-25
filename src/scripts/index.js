@@ -63,7 +63,7 @@ async function displayLoggedInMenu() {
     "YOUR GAIMON HUB",
     false
   );
-  logOut = createUpperMenuButton("logout-li", "", "LOG-OUT", true);
+  logOut = createUpperMenuButton("logout-li", "../index.php", "LOG-OUT", true);
 
   devLinkedInLi = await document.getElementById("linkedIn-li");
   devLinkedInLi.insertAdjacentElement("beforebegin", yourGaimonHub);
@@ -84,8 +84,7 @@ function createUpperMenuButton(ID, Href, InnerHTML, isLogOut) {
   aref.appendChild(button);
   li.appendChild(aref);
   li.setAttribute("id", ID);
-  if (isLogOut) {
+  if (isLogOut) 
     li.addEventListener("click", () => displayNotLoggedInMenu());
-  }
   return li;
 }
