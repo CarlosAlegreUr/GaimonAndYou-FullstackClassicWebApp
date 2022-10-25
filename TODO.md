@@ -1,5 +1,6 @@
 1.- Use HTML specific tags.
 2.- Finish javascript actions.
+    2.1.- Use cookies for detecting sesion in index.js
     2.1.- Use js best writing practises in code.
 3.- Better looking CSS.
     3.1.- Add library of OnePiece style typography.
