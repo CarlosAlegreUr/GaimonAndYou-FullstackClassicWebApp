@@ -1,3 +1,8 @@
+<?php
+   $time = time() + 1;
+   setcookie("loggedIn", null, $time);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +12,26 @@
     
     <!-- <meta> decription, author, keywords -->
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="generalStyle.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/generalStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
-    <script defer src="index.js"></script>
+    <script defer src="scripts/index.js"></script>
     <title>🏠 Gaimon  & You 🏠</title>
 </head>
 <body>
     <div class="upper-menu-div">
         <ul class="index-upper-menu">
             <li id="login-li">    
-                <a href="loggingPage.html">
+                <a href="pages/loggingPage.html">
                     <button> LOG IN </button>
                 </a>
             </li>
 
             <li id="signup-li">
-                <a href="signingUpPage.html">
+                <a href="pages/signingUpPage.html">
                     <button> SIGN UP </button>
                 </a>
             </li>
@@ -34,6 +39,12 @@
             <li id="linkedIn-li"> 
                 <a href="https://es.linkedin.com/in/carlos-alegre-urquiz%C3%BA-0b19701b3/en" target="_blank"> 
                     <button> Developer's LinkedIn </button>
+                </a> 
+            </li>
+
+            <li id="gitHub-li"> 
+                <a href="https://github.com/CarlosAlegreUr" target="_blank"> 
+                    <button> Developer's GitHub </button>
                 </a> 
             </li>
         </ul>
@@ -51,9 +62,9 @@
 
        <div class="cross-images">
             <a href="https://onepiece.fandom.com/wiki/Gaimon" target="_blank">
-             <img src="./images/treasure_cross.webp" width="13%" alt="Treasure's cross"> 
+             <img src="../../images/treasure_cross.webp" width="13%" alt="Treasure's cross"> 
             </a>
-            <img src="./images/jesus_cross.webp" width="23%" alt="Jesus's cross">
+            <img src="../../images/jesus_cross.webp" width="23%" alt="Jesus's cross">
         </div>
     </div>
 
@@ -63,22 +74,22 @@
         <table>
             <tr> 
                 <td> YourName </td> 
-                <td> <img class="table-image" src="./images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
+                <td> <img class="table-image" src="../../images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
                 <td> score </td>
             </tr>
             <tr> 
                 <td> top 1 </td> 
-                <td> <img class="table-image" src="./images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
+                <td> <img class="table-image" src="../../images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
                 <td> score </td>
             </tr>
             <tr> 
                 <td> top 2 </td> 
-                <td> <img class="table-image" src="./images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
+                <td> <img class="table-image" src="../../images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
                 <td> score </td>
             </tr>
             <tr> 
                 <td> top 3 </td> 
-                <td> <img class="table-image" src="./images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
+                <td> <img class="table-image" src="../../images/default_profile.webp" width="3%" alt="Default profile pic"> </td>
                 <td> score </td>
             </tr>
         </table>

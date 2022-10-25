@@ -1,6 +1,6 @@
 @font-face {
     font-family: onePiece;
-    src: url("./fonts/one\ piece\ font.ttf");
+    src: url("../../fonts/one\ piece\ font.ttf");
 }
 
 .center-div {
@@ -38,7 +38,7 @@
 
 body {
     background-color: rgba(250, 161, 7, 0.837);
-    background-image: url("./images/island.jpg");
+    background-image: url("../../images/island.jpg");
     background-size: cover;
 }
 
@@ -48,4 +48,9 @@ button {
     background-color: aquamarine;
     border-radius: 10px;
     text-shadow: -1px -2px 2px darkcyan;
+}
+
+.error-message {
+    color: rgb(179, 40, 40);
+    text-shadow: 1px 1px 1px;
 }
