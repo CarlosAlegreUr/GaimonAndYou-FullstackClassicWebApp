@@ -67,6 +67,8 @@ git clone https://github.com/CarlosAlegreUr/GaimonAndYou-FullstackClassicWebApp.
 - STRUCTURE OF PROJECT'S CODE:
   - [] Improve sustainability of the code
 
+- BATTLE MECHANIC!!
+
 <hr/>
 
 ## License

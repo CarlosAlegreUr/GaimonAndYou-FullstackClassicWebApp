@@ -1,1 +1,0 @@
-SELECT * FROM Gaimons WHERE name = 'Pepe';

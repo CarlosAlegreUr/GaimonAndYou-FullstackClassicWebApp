@@ -1,36 +1,50 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "password";
-$dbname = "mydb";
+// Log to debbug erros in browser
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+     // Connect to database
+     $servername = "localhost:3306";
+     $username = "root";
+     $password = "password";
+     $dbname = "GaimonAndYou";
+ 
+     $conn = new mysqli($servername, $username, $password, $dbname);
+ 
+     // Check connection
+     if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+     }
+
+
+    // Prepare and execute SQL query
+    // Gaimons table row
+    $ownerEmail = "default@gmail.com";
+    $name = $_POST["name"];
+    $glasses = isset($_POST["glasses"]) ? $_POST["glasses-menu"] : null;
+    $stick = isset($_POST["stick"]) ? 1 : 0;
+    $hat = isset($_POST["hat"]) ? 1 : 0;
+    $mood = ($_POST["mood"] == true) ? 1 : 0;
+    $battlesWon = 0;
+
+    $query =
+        file_get_contents("../database/scripts/createGaimon.sql");
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ssiiiii", $ownerEmail, $name, $glasses, $stick, $hat, $mood, $battlesWon);
+    $stmt->execute();
+
+    // Check for errors
+    if ($stmt->error) {
+        die("Error inserting data: " . $stmt->error);
+    }
+
+    // Close connection
+    $stmt->close();
+    $conn->close();
+
+    header("Location: ../views/gaimonCustomize.html");
 }
-
-// Prepare the SQL statement with placeholders
-$sql = "INSERT INTO Gaimons (ownerEmail, name, glasses, stick, hat, mood, battlesWon) VALUES ('koala@gmail.com', 'Pepe', 0, 1, 0, 0, 10)";
-
-// Prepare the statement and bind parameters
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("ssiiiii", $ownerEmail, $name, $glasses, $stick, $hat, $mood, $battlesWon);
-
-// Set the values of the parameters
-$ownerEmail = "example@example.com";
-$name = "Gaimon";
-$glasses = 1;
-$stick = true;
-$hat = false;
-$mood = true;
-$battlesWon = 5;
-
-// Execute the statement
-$stmt->execute();
-
-// Close the statement and connection
-$stmt->close();
-$conn->close();
+?>

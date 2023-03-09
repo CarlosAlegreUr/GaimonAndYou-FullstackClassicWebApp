@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,13 +15,15 @@
     <script defer src="../public/scripts/gaimonCustomize.js"></script>
     <title> 💅 Gaimon Customizer 💅</title>
 </head>
+
 <body>
 
     <div class="center-div" name="gaimon">
         <h2> CUSTOMIZE YOUR GAIMON </h2>
 
         <div>
-            <img class="gaimon-image" id="gaimon-image" src="../public/images/gaimon_normal.webp" alt="Gaimon normal face">
+            <img class="gaimon-image" id="gaimon-image" src="../public/images/gaimon_normal.webp"
+                alt="Gaimon normal face">
             <img class="gaimon-hat" id="hat" src="../public/images/hat.webp">
             <img class="gaimon-stick" id="stick" src="../public/images/stick.webp">
             <img id="sunglasses" src="../public/images/sunglasses.webp">
@@ -28,30 +31,31 @@
             <img id="vr-glasses" src="../public/images/vr_glasses.webp">
         </div>
 
-        <button id="mood-button"> MAKE HIM ANGRY </button>    
+        <button id="mood-button"> MAKE HIM ANGRY </button>
 
-        <form id="gaimon-attributes" class="log-form-box" action="../controllers/gaimonCustomize.php">
-            <input type="text" placeholder="Name">
+        <form method="post" id="gaimon-attributes" class="log-form-box" action="../controllers/gaimonCustomize.php">
+            <input name="name" type="text" placeholder="Name">
             <div id="clothing-menu">
                 <p> Select attributes: </p>
-                    Glasses <input name="glasses" id="glasses-checkbox" type="checkbox"> <br>
-                    Hat <input name="hat" id="hat-checkbox" type="checkbox"> <br>
-                    Stick <input name="stick" id="stick-checkbox" type="checkbox"> <br>
+                Glasses <input name="glasses" id="glasses-checkbox" type="checkbox"> <br>
+                Hat <input name="hat" id="hat-checkbox" type="checkbox"> <br>
+                Stick <input name="stick" id="stick-checkbox" type="checkbox"> <br>
+                <input type="checkbox" name="mood" id="mood-checkbox" style="display:none">
             </div>
             <hr>
             <button>SAVE GAIMON</button>
         </form>
-        
-    </div> 
+
+    </div>
 
     <br>
     <a href="gaimonHub.html"> <button> GO TO HUB </button> </a>
     <footer>
         <hr>
         <div class="home-button-footer">
-            <a href="index.html"> <button> HOME </button> </a>        
+            <a href="index.html"> <button> HOME </button> </a>
         </div>
-    </footer>    
+    </footer>
 </body>
-</html>
 
+</html>
