@@ -85,7 +85,7 @@ git clone
 - SERVER SIDE:
     - []  Program DataBase interaction
         - Sign-up
-        - Save yout Gaimon
+        - Save your Gaimon
 
 - STRUCTURE OF PROJECT'S CODE:
     - [] Improve sustainability of the code:

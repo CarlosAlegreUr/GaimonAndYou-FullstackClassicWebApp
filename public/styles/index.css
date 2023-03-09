@@ -15,7 +15,7 @@
 
 .info-div {
     display: block;
-    background-image: url("../../images/treasure-map.webp");
+    background-image: url("../images/treasure-map.webp");
     background-size: cover;
     width: 50%;
     margin-right: 100px;
@@ -33,7 +33,7 @@
 }
 
 .info-div:hover {
-    background-image: url("../../images/gaimon_normal.webp");
+    background-image: url("../images/gaimon_normal.webp");
     transition: 3s;
     background-size: cover;
 }

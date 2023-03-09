@@ -27,12 +27,12 @@ mood_button.addEventListener("click", changeMood)
 async function changeMood() {
     gaimon_image = await document.getElementById("gaimon-image")
     mood_button = await document.getElementById("mood-button")
-    if(gaimon_image.getAttribute("src") == "../../images/gaimon_stressed.webp") {
-        gaimon_image.setAttribute("src", "../../images/gaimon_normal.webp")
+    if(gaimon_image.getAttribute("src") == "../public/images/gaimon_stressed.webp") {
+        gaimon_image.setAttribute("src", "../public/images/gaimon_normal.webp")
         gaimon_image.setAttribute("alt", "Gaimon normal face")
         mood_button.innerHTML = "MAKE HIM ANGRY"    
     } else {
-        gaimon_image.setAttribute("src", "../../images/gaimon_stressed.webp")
+        gaimon_image.setAttribute("src", "../public/images/gaimon_stressed.webp")
         gaimon_image.setAttribute("alt", "Gaimon angry face")
         mood_button.innerHTML = "CALM HIM DOWN"    
     }

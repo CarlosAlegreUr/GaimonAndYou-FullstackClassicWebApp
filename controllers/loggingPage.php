@@ -3,7 +3,7 @@ function setCookies($email, $password)
 {
     $time = time() + 3600;
     $sesionId =  hash("SHA256", "${email}${password}${time}");
-    setcookie("loggedIn", $sesionId, $time);
+    setcookie("loggedIn", $sesionId, $time, "/");
 }
 
 function processLogInInput()
@@ -28,8 +28,10 @@ function processLogInInput()
 }
 
 $login_error = processLogInInput();
-if ($login_error === true)
-    header("Location: ./pages/gaimonHub.html");
+if ($login_error === true) {
+    // header('Content-Type: text/html');
+    header("Location: ../views/gaimonHub.html");
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +42,7 @@ if ($login_error === true)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/generalStyle.css">
+    <link rel="stylesheet" href="../public/styles/generalStyle.css">
 
     <title> 📘 Gaimon Wars Log In 📘</title>
 </head>
@@ -52,13 +54,15 @@ if ($login_error === true)
             <input class="ship-shape-input" name="email" type="email" placeholder="email"> <br>
             <input class="ship-shape-input" name="password" type="password" placeholder="password"> <br>
             <button id="login-button"> LOG IN </button>
-            <p class="error-message"> <?php echo $login_error ?> </p>
+            <p class="error-message">
+                <?php echo $login_error ?>
+            </p>
         </div>
     </form>
 
     <footer class="home-button-footer">
         <hr>
-        <a href="./pages/index.html"> <button> HOME </button> </a>
+        <a href="../views/index.html"> <button> HOME </button> </a>
     </footer>
 </body>
 

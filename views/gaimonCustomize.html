@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../styles/generalStyle.css">
-    <link rel="stylesheet" href="../styles/gaimonCustomize.css">
+    <link rel="stylesheet" href="../public/styles/generalStyle.css">
+    <link rel="stylesheet" href="../public/styles/gaimonCustomize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
-    <script defer src="../scripts/gaimonCustomize.js"></script>
+    <script defer src="../public/scripts/gaimonCustomize.js"></script>
     <title> 💅 Gaimon Customizer 💅</title>
 </head>
 <body>
@@ -20,17 +20,17 @@
         <h2> CUSTOMIZE YOUR GAIMON </h2>
 
         <div>
-            <img class="gaimon-image" id="gaimon-image" src="../../images/gaimon_normal.webp" alt="Gaimon normal face">
-            <img class="gaimon-hat" id="hat" src="../../images/hat.webp">
-            <img class="gaimon-stick" id="stick" src="../../images/stick.webp">
-            <img id="sunglasses" src="../../images/sunglasses.webp">
-            <img id="hippie-glasses" src="../../images/hippie_glasses.webp">
-            <img id="vr-glasses" src="../../images/vr_glasses.webp">
+            <img class="gaimon-image" id="gaimon-image" src="../public/images/gaimon_normal.webp" alt="Gaimon normal face">
+            <img class="gaimon-hat" id="hat" src="../public/images/hat.webp">
+            <img class="gaimon-stick" id="stick" src="../public/images/stick.webp">
+            <img id="sunglasses" src="../public/images/sunglasses.webp">
+            <img id="hippie-glasses" src="../public/images/hippie_glasses.webp">
+            <img id="vr-glasses" src="../public/images/vr_glasses.webp">
         </div>
 
         <button id="mood-button"> MAKE HIM ANGRY </button>    
 
-        <form id="gaimon-attributes" class="log-form-box">
+        <form id="gaimon-attributes" class="log-form-box" action="../controllers/gaimonCustomize.php">
             <input type="text" placeholder="Name">
             <div id="clothing-menu">
                 <p> Select attributes: </p>
