@@ -1,6 +1,31 @@
-<a name="readme-top"></a>
+# **What is this Repo for?** 🤔
 
+This repository served as my **learning playground** during my early days of delving into **full-stack web development**. I experimented with foundational web technologies, including **PHP, HTML, CSS, JS,** and **SQL**, building a web system from scratch.
+
+With time, advancements in **AI** such as **ChatGPT** and **Phind** have streamlined the self-learning process, allowing me to grasp new technologies more efficiently. This led me to shift my focus from mastering individual programming languages to understanding the systems themselves.
+
+I have since concentrated on more complex projects like my **full-stack web2 and web3 blockchain IPFS integrated app**: [**BuddyFightersNft**](https://github.com/CarlosAlegreUr/BuddyFighters-FullstackWeb3NFTGame). Though I've moved on from this initial repository, it remains a vital part of my development journey, laying the groundwork for my understanding of full-stack web systems and the main languages that brought them to life.
+
+<hr/>
+
+Here's a **preview** of 2 of the pages:
+
+<img src="webimage2.png">
+<img src="webimage1.png">
+
+# The Last README I made
+
+This is the last readme I wrote for this project:
+
+> 🐣 **Note** 🐣: Looking back, this project fills me with **pride** as I reflect on **how much my knowledge has grown**. Who knows, maybe one day I'll come back and finish it. 😄
+
+<hr/>
+<hr/>
+<hr/>
+
+<a name="readme-top"></a>
 <br />
+
 <div align="center">
     <img src="https://imgs.search.brave.com/k4Bk80k2v3PN8g-ynUcVNzFZmBTZseYHYESV50GciH0/rs:fit:592:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5T/MkhSUlhockw4eUNr/d2xJbWUyQnhRSGFG/NyZwaWQ9QXBp" alt="Logo" width="80" height="80">
 
@@ -65,6 +90,7 @@ git clone https://github.com/CarlosAlegreUr/GaimonAndYou-FullstackClassicWebApp.
     - Save your Gaimon
 
 - STRUCTURE OF PROJECT'S CODE:
+
   - [] Improve sustainability of the code
 
 - BATTLE MECHANIC!!

@@ -1,9 +1,11 @@
 <?php
+
 function setCookies($email, $password)
 {
     $time = time() + 3600;
-    $sesionId =  hash("SHA256", "${email}${password}${time}");
-    setcookie("loggedIn", $sesionId, $time, "/");
+    $sesionId =  hash("SHA256", "$email$password$time");
+    // Uncomment on production.
+    setcookie("loggedIn", $sesionId, $time, "/"); //, true, true);
 }
 
 function processLogInInput()
@@ -11,18 +13,39 @@ function processLogInInput()
     //Verifyes syntax of input and it's existnace in the databse.
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $password = hash("SHA256", $_POST["password"]);
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // TODO: Check in database
-        $in_database = true;
-        $correct_password = hash("SHA256", "admin");
-        if ($in_database)
-            if ($password === $correct_password) {
-                setCookies($email, $password);
-                return true;
-            } else
-                return "Incorrect password";
-        else
-            return "This account doesn't exsits";
+
+    // Connect to database parameters
+    $servername = "localhost:3306";
+    $username = "root";
+    $password = "password";
+    $dbname = "GaimonAndYou";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $query = "SELECT * FROM GaimonAndYou.Gaimons WHERE ownerEmail = '$email'";
+    $result = mysqli_query($conn, $query);
+
+    $row = mysqli_fetch_assoc($result);
+    $email_value = $row['ownerEmail'];
+    if (mysqli_num_rows($result) > 0 && $email_value == $email) {
+        $password = hash("SHA256", "admin");
+        // $hashed_password = hash("SHA256", "$hashed_password");
+        
+        $query = "SELECT * FROM GaimonAndYou.Gaimons WHERE hashedPassword = '$password'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        $password_received = $row['hashedPassword'];
+
+        if (mysqli_num_rows($result) > 0 && $password_received == $password) {
+            setCookies($email, $password);
+            return true;
+        } else
+            return "Incorrect password";
     } else
         return "Email not valid";
 }
